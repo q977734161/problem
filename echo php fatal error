@@ -1,0 +1,7 @@
+function shutdown_function()
+{
+    $e = error_get_last();
+    print_r($e);
+}
+register_shutdown_function('shutdown_function');
+
