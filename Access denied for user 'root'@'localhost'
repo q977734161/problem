@@ -1,0 +1,9 @@
+Access denied for user 'root'@'localhost' (using password:NO)
+       sudo /etc/init.d/mysqld stop      //关闭mysql
+       mysqld_safe --user=mysql --skip-grant-tables --skip-networking &    
+       mysql -u root mysql
+       mysql> UPDATE user SET Password=PASSWORD('你想要的密码') where USER='root';
+       mysql> FLUSH PRIVILEGES;
+       mysql> quit
+       sudo /etc/init.d/mysqld start
+       mysql -uroot -p 你的密码
